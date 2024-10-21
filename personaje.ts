@@ -23,6 +23,9 @@ export abstract class Personaje {
         this.nombre
       } recibió ${cantidad} de daño. Vida restante: ${this.getPuntosDeVida()}.`
     );
+    if (this.puntosDeVida <= 0) {
+      console.log(`${this.nombre} ha sido derrotado.`);
+    }
   }
 
   getPuntosDeVida(): number {
